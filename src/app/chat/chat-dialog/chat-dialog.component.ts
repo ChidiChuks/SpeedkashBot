@@ -1,5 +1,7 @@
-import { ChatService } from './../../chat.service';
+import { ChatService, Message } from './../../chat.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/scan'
 
 @Component({
   selector: 'chat-dialog',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-dialog.component.css']
 })
 export class ChatDialogComponent implements OnInit {
+
+  messages: Observable;
 
   constructor(private chat: ChatService) { }
 
