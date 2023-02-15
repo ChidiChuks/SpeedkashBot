@@ -3,6 +3,13 @@ import { environment } from 'src/environments/environment.development';
 
 import { ApiAiClient } from 'api-ai-javascript';
 
+import { Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
+
+export class Message {
+  constructor() {}
+}
+
 
 @Injectable(
   {
